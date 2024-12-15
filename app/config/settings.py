@@ -1,6 +1,6 @@
 from pathlib import Path
 
-BASE_DIR = Path().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 class Settings:
     db_type: str = 'sql'

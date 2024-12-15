@@ -6,9 +6,9 @@ from .base import Base
 from .mixins import UserRelationMixin
 
 
-class UserTasks(UserRelationMixin, Base):
-    __tablename__ = 'user_tasks'
-    _user_back_populates = "posts"
+class UserTask(UserRelationMixin, Base):
+    __tablename__ = 'user_task'
+    _user_back_populates = "tasks"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str]
