@@ -1,6 +1,4 @@
-from typing import TYPE_CHECKING
-
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column
 
 from .base import Base
 from .mixins import UserRelationMixin
@@ -13,4 +11,4 @@ class UserTask(UserRelationMixin, Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str]
     message: Mapped[str]
-
+    is_done: Mapped[bool] = mapped_column(default=False)

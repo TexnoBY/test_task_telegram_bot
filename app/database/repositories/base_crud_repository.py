@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
-from typing import TypeVar, Generic, Type
+from typing import TypeVar, Generic
 
-from database.schemas.user_schema import UserUpdate, UserUpdatePartial
-from database.schemas.user_task_schema import UserTaskUpdate, UserTaskUpdatePartial
+from app.database.schemas.user_schema import UserUpdate, UserUpdatePartial
+from app.database.schemas.user_task_schema import UserTaskUpdate, UserTaskUpdatePartial
 
 ModelT = TypeVar("ModelT")
 ModelDbHelper = TypeVar('ModelDbHelper')
@@ -51,4 +51,3 @@ class BaseCrudRepository(Generic[ModelT, ModelDbHelper], ABC):
 
     def get_user_tasks(self, user_id: int):
         raise NotImplementedError("get_user_tasks() is not implemented()")
-

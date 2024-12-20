@@ -14,9 +14,10 @@ class User(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     login: Mapped[str] = mapped_column(unique=True, index=True)
     user_telegram_id: Mapped[int] = mapped_column(unique=True, index=True)
+    name: Mapped[str]
     password: Mapped[str]
 
-    tasks: Mapped[List["UserTask"]] =  relationship(
+    tasks: Mapped[List["UserTask"]] = relationship(
         back_populates="user"
     )
 

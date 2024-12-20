@@ -3,12 +3,13 @@ from asyncio import current_task
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker, async_scoped_session, \
     AsyncEngine
 
-from app.config.settings import settings
+from app.config.dbsettings import db_settings
 
 
 class AlchemyDBHelper:
     engine: AsyncEngine
     session_factory: async_sessionmaker
+
     def __init__(self, url: str, echo: bool = False):
         self.engine = create_async_engine(
             url=url,
@@ -40,6 +41,6 @@ class AlchemyDBHelper:
 
 
 alchemy_db_helper = AlchemyDBHelper(
-    url=settings.get_db_url(),
-    echo=settings.echo,
+    url=db_settings.get_db_url(),
+    echo=db_settings.echo,
 )
