@@ -139,3 +139,8 @@ cython_debug/
 
 # My
 .idea
+*.session
+*.session-journal
+*.drawio.dtmp
+*.drawio.bkp
+alembic/versions/
