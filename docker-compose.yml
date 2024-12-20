@@ -1,0 +1,21 @@
+version: "3.12"
+
+services:
+  telegram-bot:
+    restart: unless-stopped
+    entrypoint: /app/docker/server-entrypoint.sh
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    environment:
+      BOT_NAME: "BOT_NAME"
+      API_ID: 'API_ID'
+      API_HASH: "API_HASH"
+      BOT_TOKEN: "BOT_TOKEN"
+
+      DB_TYPE: "sql"
+      DB: "sqlite"
+      DB_HOST: "localhost"
+      DB_PORT: None
+      DB_NAME: "dbtest.sqlite3"
+      DB_ECHO: True
