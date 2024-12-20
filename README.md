@@ -35,13 +35,10 @@
 ![Схема БД](DBScheme.svg)
  <br/>
  <br/>
-- Схема работы бота 
- <br/>
- <br/>
- <br/>
- ![Схема бота](BotFSM.svg)
+- Схема работы бота
+- ![Схема бота](BotFSM.svg)
 
-    Для управления состояниями использовался [репозиторий](https://github.com/kotttee/pyrogram_patch)
+- Для управления состояниями использовался [репозиторий](https://github.com/kotttee/pyrogram_patch)
  предоставляющий управлениями состояниями схожее с библиотекой [aiogram](https://github.com/aiogram/aiogram)
 ### Модуль database
 
