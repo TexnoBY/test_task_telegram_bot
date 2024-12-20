@@ -1,5 +1,5 @@
 __all__ = (
-    'settings'
+    'db_settings'
 )
 
-from .settings import settings
+from .dbsettings import db_settings
