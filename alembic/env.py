@@ -26,7 +26,7 @@ target_metadata = Base.metadata
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
-from app.config.dbsettings import db_settings
+from app.database.dbsettings import db_settings
 
 config.set_main_option("sqlalchemy.url", db_settings.get_db_url())
 

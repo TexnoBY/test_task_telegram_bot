@@ -10,16 +10,16 @@ from pyrogram_patch.fsm.filter import StateFilter
 from pyrogram_patch.fsm.storages import MemoryStorage
 from pyrogram_patch.router import Router
 
-from bot_utils import get_inline_keyboard
-from config.dbsettings import bot_settings
+from .bot_utils import get_inline_keyboard
+from .bot_config import bot_settings
 from database.repositories import alchemy_repository as repository
 from database.schemas.user_schema import UserCreate
 from database.schemas.user_task_schema import UserTaskCreate, UserTaskUpdatePartial
-from fsm.state_groups.login_group import LoginGroup
-from fsm.state_groups.navigation_group import NavigationGroup
-from fsm.state_groups.task_change import TaskChangeGroup
-from fsm.state_groups.task_creating import TaskGroup
-from keyboard.main_keyboard import main_keyboard
+from .fsm.state_groups.login_group import LoginGroup
+from .fsm.state_groups.navigation_group import NavigationGroup
+from .fsm.state_groups.task_change import TaskChangeGroup
+from .fsm.state_groups.task_creating import TaskGroup
+from .keyboard.main_keyboard import main_keyboard
 
 app = Client(bot_settings.BOT_NAME,
              api_id=bot_settings.API_ID,
@@ -367,5 +367,3 @@ async def change_task_message(client: Client, message: Message, state: State) ->
     await message.reply('Задача изменена',
                         reply_markup=main_keyboard)
 
-
-app.run()

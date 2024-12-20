@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import TypeVar, Generic
 
-from app.database.schemas.user_schema import UserUpdate, UserUpdatePartial
-from app.database.schemas.user_task_schema import UserTaskUpdate, UserTaskUpdatePartial
+from database.schemas.user_schema import UserUpdate, UserUpdatePartial
+from database.schemas.user_task_schema import UserTaskUpdate, UserTaskUpdatePartial
 
 ModelT = TypeVar("ModelT")
 ModelDbHelper = TypeVar('ModelDbHelper')

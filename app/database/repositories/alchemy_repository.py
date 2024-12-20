@@ -1,10 +1,10 @@
 from sqlalchemy import select
 
-from app.database.db_helpers.alchemydbhelper import AlchemyDBHelper, alchemy_db_helper
-from app.database.models.sql_models import User, UserTask
-from app.database.repositories.base_crud_repository import BaseCrudRepository
-from app.database.schemas.user_schema import User as UserSchema, UserCreate, UserUpdate, UserUpdatePartial
-from app.database.schemas.user_task_schema import UserTaskCreate, UserTaskUpdate, UserTaskUpdatePartial
+from database.db_helpers.alchemydbhelper import AlchemyDBHelper, alchemy_db_helper
+from database.models.sql_models import User, UserTask
+from database.repositories.base_crud_repository import BaseCrudRepository
+from database.schemas.user_schema import User as UserSchema, UserCreate, UserUpdate, UserUpdatePartial
+from database.schemas.user_task_schema import UserTaskCreate, UserTaskUpdate, UserTaskUpdatePartial
 
 
 class AlchemyRepository(BaseCrudRepository):
